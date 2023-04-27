@@ -34,8 +34,9 @@ def markAttendance(name):
             nameList.append(entry[0])
         if name not in nameList:
             now = datetime.now()
+            today = now.strftime('%d/%m/%Y')
             dtString = now.strftime('%H:%M:%S')
-            f.writelines(f'\n{name},{dtString}')
+            f.writelines(f'\n{name},{dtString}, {today}')
 
 encodeListKnown = findEncodings(images)
 print('Encoding Complete')
