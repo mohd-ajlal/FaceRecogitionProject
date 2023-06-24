@@ -36,7 +36,8 @@ def markAttendance(name):
             now = datetime.now()
             today = now.strftime('%d/%m/%Y')
             dtString = now.strftime('%H:%M:%S')
-            f.writelines(f'\n{name},{dtString}, {today}')
+            present = 1
+            f.writelines(f'\n{name},{dtString},{today},{present}')
 
 encodeListKnown = findEncodings(images)
 print('Encoding Complete')
